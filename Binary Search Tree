@@ -1,0 +1,28 @@
+/C Program to search an element in a Binary Tree 
+ #include <stdio.h> 
+ #include <stdlib.h> 
+  
+ int main() { 
+     // Write C code here 
+     
+     struct node{ 
+         int data; 
+         struct node*left; 
+         struct node*right; 
+     }; 
+     struct node*create(int val){ 
+         struct node*p=(struct node*)malloc(sizeof(struct node)); 
+         p->data=val; 
+         p->left=NULL; 
+         p->right=NULL; 
+         return(p); 
+     }; 
+     struct node * left(int val,struct node * root){ 
+         struct node*p=create(val); 
+         root->left=p; 
+          
+     }; 
+     struct node * right(int val,struct node*root){ 
+         struct node*p=create(val); 
+         root->right=p; 
+     };
